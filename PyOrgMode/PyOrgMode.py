@@ -435,6 +435,10 @@ class OrgDrawer(OrgPlugin):
         def _output(self):
             """Outputs the property in text format (e.g. :name: value)"""
             return ":" + self.name + ": " + self.value
+            # if self.name == "ID":
+            #     return ":" + self.name + ":       " + self.value
+            # else:
+            #     return ":" + self.name + ": " + self.value
 
 class OrgTable(OrgPlugin):
     """A plugin for table managment"""

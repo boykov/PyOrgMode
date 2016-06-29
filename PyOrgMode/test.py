@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 """Tests for parsing and outputting a simple .org test file
  
@@ -22,6 +24,7 @@ class TestExampleOrgFile(unittest.TestCase):
     def test_test_org(self):
         test = PyOrgMode.OrgDataStructure()
         locale.setlocale(locale.LC_ALL, 'fr_FR.UTF-8')
+        # locale.setlocale(locale.LC_ALL, 'ru_RU.UTF-8')
         test.load_from_file("test.org")
         test.save_to_file("output.org")
         original = [_normalize_ignored(line) for line in open("test.org")]
